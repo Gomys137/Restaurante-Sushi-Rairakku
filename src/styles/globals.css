@@ -1,0 +1,61 @@
+/* ----------------------------- */
+/* Reset Geral + Normalização    */
+/* ----------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: #0c0c0c;   /* Fundo uniforme do site */
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Remove estilos padrão */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li {
+  list-style: none;
+}
+
+/* Imagens responsivas */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Suavidade em hover & animações */
+button,
+a,
+input {
+  transition: .2s ease;
+}
+
+/* Seleção de texto personalizada */
+::selection {
+  background: #e63946;
+  color: white;
+}
+
+/* Scrollbar estilizada (desktop) */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e63946;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+  background: #111;
+}
