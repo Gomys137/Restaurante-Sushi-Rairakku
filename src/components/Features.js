@@ -3,38 +3,38 @@ export default function Features() {
     {
       icon: "fa-solid fa-fish",
       color: "red",
-      title: "Sushi Fresco e Variado",
-      description: "Ingredientes selecionados diariamente, preparados na hora com técnica e cuidado."
+      title: "Sushi Sempre Fresco",
+      description: "Peixe fresco e ingredientes selecionados, preparados no momento com rigor e atenção ao detalhe."
     },
     {
       icon: "fa-solid fa-star",
       color: "yellow",
-      title: "Avaliação de 4.4 Estrelas",
-      description: "Mais de 1.300 clientes satisfeitos que confiam na nossa qualidade."
+      title: "Avaliação de 5.0 Estrelas",
+      description: "Clientes satisfeitos destacam a frescura, a qualidade e o cuidado em cada encomenda."
     },
     {
-      icon: "fa-solid fa-money-bill-wave",
+      icon: "fa-solid fa-box",
       color: "green",
-      title: "Excelente Qualidade/Preço",
-      description: "Sushi premium a preços acessíveis. Rodízio ao fim de semana por apenas 13,99€."
+      title: "Take Away & Entrega",
+      description: "Ideal para levar ou receber em casa, com embalagens cuidadas que preservam a qualidade."
     },
     {
       icon: "fa-solid fa-bolt",
       color: "orange",
-      title: "Serviço Rápido",
-      description: "Atendimento eficiente sem comprometer a qualidade. O seu tempo é valioso."
+      title: "Preparação Rápida",
+      description: "Processo eficiente sem comprometer a qualidade, para que o seu pedido chegue no ponto certo."
     },
     {
       icon: "fa-solid fa-face-smile-beam",
       color: "blue",
-      title: "Atendimento Simpático",
-      description: "Equipa acolhedora que faz com que se sinta em casa em cada visita."
+      title: "Atendimento Atencioso",
+      description: "Serviço próximo e simpático, focado na satisfação de quem nos escolhe."
     },
     {
-      icon: "fa-solid fa-bowl-food",
+      icon: "fa-solid fa-money-bill-wave",
       color: "red",
-      title: "Buffet / Rodízio Disponível",
-      description: "All you can eat com variedade ilimitada dos melhores pratos japoneseses."
+      title: "Qualidade / Preço Equilibrados",
+      description: "Sushi de elevada qualidade a preços justos, ideal para o dia a dia ou ocasiões especiais."
     }
   ];
 
@@ -43,10 +43,10 @@ export default function Features() {
       <div className="features-container">
         <header className="features-header">
           <h2 id="features-heading" className="features-title">
-            Porque Escolher o <span className="highlight">Sushi Rairakku?</span>
+            Porque Escolher o <span className="highlight">Sushi Shogun?</span>
           </h2>
           <p className="features-subtitle">
-            Qualidade, variedade e serviço de excelência em cada visita
+            Frescura, consistência e confiança em cada pedido
           </p>
         </header>
 

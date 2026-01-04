@@ -5,9 +5,9 @@ export default function Location() {
       icon: "fa-solid fa-location-dot",
       color: "red",
       title: "Morada",
-      description: "Algueirão-Mem Martins<br/>Sintra, Portugal",
+      description: "R. Angola, 2725-219<br/>Algueirão-Mem Martins",
       linkText: "Como Chegar",
-      linkUrl: "#contacto",
+      linkUrl: "https://maps.google.com/?q=R.+Angola,+2725-219+Algueirão-Mem+Martins",
       linkIcon: "fa-solid fa-arrow-right"
     },
     {
@@ -15,9 +15,9 @@ export default function Location() {
       icon: "fa-solid fa-phone",
       color: "yellow",
       title: "Telefone",
-      description: "Ligue para fazer uma reserva ou encomenda",
-      linkText: "Ver Contacto",
-      linkUrl: "tel:+351000000000",
+      description: "Faça a sua encomenda por telefone",
+      linkText: "Ligar Agora",
+      linkUrl: "tel:+351920614257",
       linkIcon: "fa-solid fa-arrow-right"
     },
     {
@@ -25,9 +25,9 @@ export default function Location() {
       icon: "fa-solid fa-clock",
       color: "green",
       title: "Horário",
-      description: "Aberto todos os dias<br/>Consulte o horário completo na página de contacto",
-      linkText: "Ver Horários",
-      linkUrl: "#horarios",
+      description: "Aberto todos os dias<br/>Das 12:00 às 23:00",
+      linkText: "Ver no Google Maps",
+      linkUrl: "https://maps.google.com/?q=Sushi+Shogun+Algueirão-Mem+Martins",
       linkIcon: "fa-solid fa-arrow-right"
     }
   ];
@@ -37,10 +37,10 @@ export default function Location() {
       <div className="location-container">
         <header className="location-header">
           <h2 id="location-heading" className="location-title">
-            Visite-nos em <span className="highlight">Algueirão-Mem Martins</span>
+            Onde Estamos <span className="highlight">Algueirão-Mem Martins</span>
           </h2>
           <p className="location-subtitle">
-            Estamos prontos para o receber com o melhor sushi da região
+            Take away e entrega de sushi fresco, preparados no momento
           </p>
         </header>
 
@@ -57,14 +57,16 @@ export default function Location() {
                 </div>
                 <div className="card-content">
                   <h3 className="card-title">{item.title}</h3>
-                  <p 
-                    className="card-description" 
+                  <p
+                    className="card-description"
                     dangerouslySetInnerHTML={{ __html: item.description }}
                   ></p>
-                  <a 
-                    href={item.linkUrl} 
+                  <a
+                    href={item.linkUrl}
                     className="card-link"
-                    aria-label={`${item.linkText} para ${item.title}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${item.linkText} - ${item.title}`}
                   >
                     <span>{item.linkText}</span>
                     <i className={item.linkIcon} aria-hidden="true"></i>
@@ -81,14 +83,16 @@ export default function Location() {
                 <div className="map-pulse"></div>
               </div>
               <div className="map-content">
-                <h3 className="map-title">Localização Interativa</h3>
+                <h3 className="map-title">Mapa & Direções</h3>
                 <p className="map-description">
-                  Veja a nossa localização exata no mapa e obtenha direções
+                  Veja a localização exata e obtenha direções no Google Maps
                 </p>
-                <a 
-                  href="/contacto" 
+                <a
+                  href="https://maps.google.com/?q=Sushi+Shogun+Algueirão-Mem+Martins"
                   className="map-button"
-                  aria-label="Abrir mapa da localização"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Abrir localização no Google Maps"
                 >
                   <span>Abrir Mapa</span>
                   <i className="fa-solid fa-external-link-alt" aria-hidden="true"></i>

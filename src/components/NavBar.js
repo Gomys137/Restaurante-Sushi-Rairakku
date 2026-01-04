@@ -5,7 +5,7 @@ export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Efeito para detectar scroll
+  // Detetar scroll
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -15,19 +15,14 @@ export default function NavBar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Fechar menu ao clicar em link
+  // Fechar menu ao clicar num link
   const handleLinkClick = () => {
     setIsMenuOpen(false);
   };
 
-  // Prevenir scroll quando menu aberto
+  // Bloquear scroll quando menu mobile aberto
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    
+    document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset';
     return () => {
       document.body.style.overflow = 'unset';
     };
@@ -42,7 +37,7 @@ export default function NavBar() {
           <Link href="/" className="nav-logo">
             <img 
               src="/logo.png" 
-              alt="Sushi Rairakku" 
+              alt="Sushi Shogun" 
               className="logo-img"
               width={160}
               height={60}
@@ -52,42 +47,26 @@ export default function NavBar() {
           {/* Menu Desktop */}
           <ul className="nav-menu">
             <li>
-              <Link 
-                href="#menu" 
-                className="nav-link"
-                onClick={handleLinkClick}
-              >
+              <Link href="#menu" className="nav-link" onClick={handleLinkClick}>
                 <span className="link-text">MENU</span>
                 <span className="link-underline"></span>
               </Link>
             </li>
             <li>
-              <Link 
-                href="#sobre" 
-                className="nav-link"
-                onClick={handleLinkClick}
-              >
+              <Link href="#sobre" className="nav-link" onClick={handleLinkClick}>
                 <span className="link-text">SOBRE</span>
                 <span className="link-underline"></span>
               </Link>
             </li>
             <li>
-              <Link 
-                href="#avaliacoes" 
-                className="nav-link"
-                onClick={handleLinkClick}
-              >
+              <Link href="#avaliacoes" className="nav-link" onClick={handleLinkClick}>
                 <span className="link-text">AVALIAÇÕES</span>
                 <span className="link-underline"></span>
               </Link>
             </li>
             <li>
-              <Link 
-                href="#contacto" 
-                className="nav-link"
-                onClick={handleLinkClick}
-              >
-                <span className="link-text">CONTACTO</span>
+              <Link href="#localizacao" className="nav-link" onClick={handleLinkClick}>
+                <span className="link-text">LOCALIZAÇÃO</span>
                 <span className="link-underline"></span>
               </Link>
             </li>
@@ -99,11 +78,11 @@ export default function NavBar() {
             className="nav-button"
             aria-label="Fazer pedido online"
           >
-            <span>Pedir Online</span>
+            <span>Pedir Agora</span>
             <i className="fa-solid fa-basket-shopping"></i>
           </a>
 
-          {/* Botão Hamburger Mobile */}
+          {/* Hamburger Mobile */}
           <button 
             className={`hamburger ${isMenuOpen ? 'active' : ''}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -121,61 +100,45 @@ export default function NavBar() {
           <div className="mobile-menu-content">
             <ul className="mobile-nav">
               <li>
-                <Link 
-                  href="#menu" 
-                  className="mobile-link"
-                  onClick={handleLinkClick}
-                >
+                <Link href="#menu" className="mobile-link" onClick={handleLinkClick}>
                   <i className="fa-solid fa-utensils"></i>
                   <span>MENU</span>
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="#sobre" 
-                  className="mobile-link"
-                  onClick={handleLinkClick}
-                >
+                <Link href="#sobre" className="mobile-link" onClick={handleLinkClick}>
                   <i className="fa-solid fa-store"></i>
                   <span>SOBRE</span>
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="#avaliacoes" 
-                  className="mobile-link"
-                  onClick={handleLinkClick}
-                >
+                <Link href="#avaliacoes" className="mobile-link" onClick={handleLinkClick}>
                   <i className="fa-solid fa-star"></i>
                   <span>AVALIAÇÕES</span>
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="#contacto" 
-                  className="mobile-link"
-                  onClick={handleLinkClick}
-                >
-                  <i className="fa-solid fa-phone"></i>
-                  <span>CONTACTO</span>
+                <Link href="#localizacao" className="mobile-link" onClick={handleLinkClick}>
+                  <i className="fa-solid fa-location-dot"></i>
+                  <span>LOCALIZAÇÃO</span>
                 </Link>
               </li>
             </ul>
 
             <div className="mobile-cta">
               <a 
-                href="#pedido" 
+                href="tel:+351920614257" 
                 className="mobile-button"
                 onClick={handleLinkClick}
               >
-                <i className="fa-solid fa-basket-shopping"></i>
-                <span>Pedir Online</span>
+                <i className="fa-solid fa-phone"></i>
+                <span>Ligar Agora</span>
               </a>
               
               <div className="mobile-info">
                 <p className="mobile-phone">
                   <i className="fa-solid fa-phone"></i>
-                  +351 912 345 678
+                  +351 920 614 257
                 </p>
                 <p className="mobile-address">
                   <i className="fa-solid fa-location-dot"></i>
@@ -187,7 +150,7 @@ export default function NavBar() {
         </div>
       </nav>
 
-      {/* Overlay para fechar menu ao clicar fora */}
+      {/* Overlay */}
       {isMenuOpen && (
         <div 
           className="menu-overlay" 

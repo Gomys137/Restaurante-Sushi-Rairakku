@@ -9,14 +9,14 @@ export default function About() {
             <div className="image-wrapper">
               <img 
                 src="/sushi-about.jpg" 
-                alt="Preparação de sushi fresco no restaurante Sushi Rairakku" 
+                alt="Preparação de sushi fresco no Sushi Shogun"
                 width={600}
                 height={400}
                 className="about-img"
                 loading="lazy"
               />
               <div className="image-badge" aria-hidden="true">
-                <span>Desde 2015</span>
+                <span>Sushi Fresco</span>
               </div>
             </div>
           </div>
@@ -24,51 +24,54 @@ export default function About() {
           {/* TEXTO À DIREITA - Desktop / Abaixo - Mobile */}
           <div className="about-text">
             <header className="about-header">
-              <span className="about-subtitle">A Nossa História</span>
+              <span className="about-subtitle">Quem Somos</span>
               <h2 id="about-heading" className="about-title">
-                Sobre o Restaurante <br />
-                <span className="highlight">Sushi Rairakku</span>
+                Sobre o <br />
+                <span className="highlight">Sushi Shogun</span>
               </h2>
             </header>
 
             <div className="about-description">
               <p>
-                Com vários anos de experiência, o Restaurante Sushi Rairakku é uma referência em Algueirão-Mem Martins
-                para quem procura <strong>sushi fresco e de qualidade</strong> a preços justos.
+                O <strong>Sushi Shogun</strong> nasceu com um objetivo simples:
+                levar <strong>sushi fresco e de elevada qualidade</strong> até si,
+                com todo o cuidado, rigor e atenção ao detalhe.
               </p>
 
               <p>
-                A nossa missão é oferecer uma <strong>experiência gastronómica autêntica</strong>,
-                com uma ampla variedade de pratos japoneses preparados com ingredientes frescos e selecionados diariamente.
+                Trabalhamos maioritariamente em regime de <strong>take away e entrega</strong>,
+                garantindo que cada peça é preparada no momento,
+                utilizando ingredientes frescos e peixe cuidadosamente selecionado.
               </p>
 
               <p>
-                O nosso compromisso passa por manter uma <strong>qualidade consistente</strong> em cada prato,
-                um atendimento simpático e rápido, e um ambiente acolhedor onde todos se sentem bem-vindos.
+                Acreditamos que a verdadeira qualidade está na consistência,
+                na boa relação <strong>qualidade/preço</strong> e na satisfação de quem confia em nós,
+                seja para uma refeição rápida ou um momento especial.
               </p>
             </div>
 
             <div className="about-quote">
               <i className="fa-solid fa-quote-left" aria-hidden="true"></i>
               <blockquote>
-                "Excelente relação qualidade/preço. Um restaurante que nunca desilude!"
-                <footer className="quote-footer">— Cliente Regular</footer>
+                "Sempre tudo fresco, bem embalado e delicioso. Vou repetir de certeza!"
+                <footer className="quote-footer">— Cliente Satisfeito</footer>
               </blockquote>
             </div>
 
             <div className="about-cta">
               <a href="#menu" className="about-button primary">
-                <span>Saber Mais</span>
+                <span>Ver Menu</span>
                 <i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
               </a>
               <div className="about-stats">
                 <div className="stat">
-                  <span className="stat-number">1.300+</span>
-                  <span className="stat-label">Clientes Satisfeitos</span>
+                  <span className="stat-number">5★</span>
+                  <span className="stat-label">Avaliação Média</span>
                 </div>
                 <div className="stat">
-                  <span className="stat-number">8+</span>
-                  <span className="stat-label">Anos de Experiência</span>
+                  <span className="stat-number">100%</span>
+                  <span className="stat-label">Foco na Qualidade</span>
                 </div>
               </div>
             </div>

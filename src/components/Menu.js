@@ -4,28 +4,28 @@ export default function Menu() {
       id: 1,
       image: '/sushi.jpg',
       title: 'Sushi & Sashimi',
-      description: 'Peixes frescos e cortes perfeitos',
+      description: 'Peixe fresco, cortes precisos e combinações equilibradas',
       color: '#e63946'
     },
     {
       id: 2,
       image: '/temaki.jpg',
       title: 'Temakis',
-      description: 'Cones recheados com sabor',
+      description: 'Preparados na hora, cheios de sabor e frescura',
       color: '#4e6cff'
     },
     {
       id: 3,
       image: '/gyosa.jpg',
-      title: 'Entradas & Pratos',
-      description: 'Variedade de sabores únicos',
+      title: 'Entradas & Quentes',
+      description: 'Gyozas, pratos quentes e acompanhamentos japoneses',
       color: '#34c759'
     },
     {
       id: 4,
-      image: '/bufet.jpg',
-      title: 'Buffet / Rodízio',
-      description: 'All you can eat por 13,99€',
+      image: '/combinados.jpg',
+      title: 'Combinados',
+      description: 'Seleções ideais para partilhar ou desfrutar sozinho',
       color: '#f5b700'
     }
   ];
@@ -38,7 +38,7 @@ export default function Menu() {
             O Nosso <span className="highlight">Menu</span>
           </h2>
           <p className="menu-subtitle">
-            Descubra a autêntica gastronomia japonesa com os nossos pratos únicos
+            Sushi fresco preparado no momento, perfeito para levar ou receber em casa
           </p>
         </header>
 
@@ -50,10 +50,7 @@ export default function Menu() {
               role="listitem"
               aria-label={`Categoria: ${item.title}`}
             >
-              <div 
-                className="menu-image-container"
-             
-              >
+              <div className="menu-image-container">
                 <div 
                   className="menu-img" 
                   style={{ backgroundImage: `url('${item.image}')` }}
